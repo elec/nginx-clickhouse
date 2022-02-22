@@ -68,8 +68,7 @@ They are defined in `/etc/nginx/nginx.conf` file. For example we create `main` l
 ```lua
 http {
     ...
-     log_format main '$remote_addr - $remote_user [$time_local]
-         "$request" $status $bytes_sent "$http_referer" "$http_user_agent"';
+     log_format main '$remote_addr - $remote_user [$time_local] "$request" $status $bytes_sent "$http_referer" "$http_user_agent"';
     ...
 }
 ```
@@ -165,6 +164,7 @@ nginx:
 settings:
     interval: 5
     log_path: /var/log/nginx/my-site-access.log
+    seek_from_end: false
 clickhouse:
     db: metrics
     table: nginx
