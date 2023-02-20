@@ -1,5 +1,5 @@
 # build stage
-FROM golang:1.20.0-alpine AS build-env
+FROM golang:1.20.1-alpine AS build-env
 
 WORKDIR /go/src/github.com/mintance/nginx-clickhouse
 
