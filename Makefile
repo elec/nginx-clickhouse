@@ -19,4 +19,4 @@ build:
 	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o nginx-clickhouse .
 
 docker:
-	docker build --rm --no-cache=true -t cr.yandex/crpvh3pslieph3dfm3p0/nginx-clickhouse -f Dockerfile .
+	docker build --rm --no-cache=true -t cr.elec-co.ru/common/nginx-clickhouse -f Dockerfile .
